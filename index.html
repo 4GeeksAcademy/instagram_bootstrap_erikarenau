@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram with Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/072e5df971.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <style>
+        .nav-pill .nav-link{
+            color: grey;
+        }
+        .nav-pill .nav-link.active{
+            color: blue;
+        }
+    </style>
+    <nav class="navbar navbar-light bg-light py-3">
+        <div class="container-fluid">
+            <div class="d-flex w-100 justify-content-between">
+                <div>
+                    <i class="fa-brands fa-instagram fa-xl"></i>
+                    <h5 class="d-inline-block fs-5">Instagram</h5>
+                </div>
+                <div class="d-flex ms-auto justify-content-end">
+                    <button type="button" class="btn btn-success me-2" data-bs-toggle="modal"
+                        data-bs-target="#newModal">
+                        Create a new post
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-gear"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Accessibility</a></li>
+                            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="modal fade" id="newModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>Caption:</h6>
+                        <textarea class="form-control" placeholder="Add the caption of your post here"
+                            id="floatingTextarea2"></textarea> 
+                        <div class="row p-2">
+                            <button class="col-1 border rounded p-1 m-1 btn-light">
+                                <i class="fa-solid fa-camera"></i>
+                            </button>
+                            <button class="col-1 border rounded p-1 m-1 btn-light">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success">Publish</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid p-2">
+            <ul class="nav nav-pill justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                        role="tab" aria-controls="home" aria-selected="true"><i
+                            class="fa-solid fa-table-cells"></i></a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                        role="tab" aria-controls="profile" aria-selected="false"><i class="fa-solid fa-square"></i></a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active overflow-hidden" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="row">
+                        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://t4.ftcdn.net/jpg/09/79/94/29/240_F_979942902_6D15P7egW9aiN4ptKPIhLTWyLF3nqoa6.jpg" class="img-fluid w-100" alt="fiesta"></div>
+                        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://t4.ftcdn.net/jpg/05/90/65/85/240_F_590658554_gi3lnokx7uXYlf1Ybr3PuBQKP6hRi7hv.jpg" class="img-fluid w-100" alt="amigos"></div>
+                        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://t3.ftcdn.net/jpg/10/16/85/78/240_F_1016857844_hLmRlx3prQJuJecJP6nYowWxDElmWIiT.jpg" class="img-fluid w-100" alt="atardecer"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://t4.ftcdn.net/jpg/02/74/45/17/240_F_274451707_jZJ4Swvhj97cp88SjX3mnhX549BB3Lgc.jpg" class="img-fluid w-100" alt="viaje"></div>
+                        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://t4.ftcdn.net/jpg/01/38/87/91/240_F_138879129_RJrse7nHE1fW8ApmEKXo6c96OHxgGQ1X.jpg" class="img-fluid w-100" alt="orientacion"></div>
+                        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://t4.ftcdn.net/jpg/05/13/05/87/240_F_513058705_4wX0JPxF9CBxfwrA3UVNsUKRNcpFfqxD.jpg" class="img-fluid w-100" alt="excursion"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://t4.ftcdn.net/jpg/04/33/24/11/240_F_433241102_zAOmDuVCK8niPcbVVkjD8LMZMAjyS07H.jpg" class="img-fluid w-100" alt="verano"></div>
+                        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://t4.ftcdn.net/jpg/00/90/23/73/240_F_90237325_nQToQU52Ffbjqon6jqVvomMHekImHIku.jpg" class="img-fluid w-100" alt="artistic"></div>
+                        <div class="col-4 p-1"><img style="height: 30vw; object-fit: cover;" src="https://t3.ftcdn.net/jpg/06/13/78/54/240_F_613785405_6n6FaYLkOnsMjDe7jTdpKJYOblQsDCN5.jpg" class="img-fluid w-100" alt="home"></div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade overflow-hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="row my-3">
+                        <div class="col-5 mx-auto border rounded p-0">
+                            <div class="d-flex p-2">
+                                <div class="w-100 fs-4">Tonight!</div>
+                                <small class="align-bottom">06/25</small>
+                            </div>
+                            <img style="object-fit: cover;" src="https://t4.ftcdn.net/jpg/09/79/94/29/240_F_979942902_6D15P7egW9aiN4ptKPIhLTWyLF3nqoa6.jpg" class="img-fluid w-100 col-12" alt="fiesta"/>
+                        <div class="p-2">
+                            <strong>104 Likes</strong>
+                            <p>This night has been amazing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row my-3">
+                    <div class="col-5 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Friends</div>
+                            <small class="align-bottom">05/28</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://t4.ftcdn.net/jpg/05/90/65/85/240_F_590658554_gi3lnokx7uXYlf1Ybr3PuBQKP6hRi7hv.jpg" class="img-fluid w-100 col-12" alt="amigos"/>
+                    <div class="p-2">
+                        <strong>156 Likes</strong>
+                        <p>Who has a friend, has a treasure</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+                <div class="row my-3">
+                    <div class="col-5 mx-auto border rounded p-0">
+                        <div class="d-flex p-2">
+                            <div class="w-100 fs-4">Sunset</div>
+                            <small class="align-bottom">04/20</small>
+                        </div>
+                        <img style="object-fit: cover;" src="https://t3.ftcdn.net/jpg/10/16/85/78/240_F_1016857844_hLmRlx3prQJuJecJP6nYowWxDElmWIiT.jpg" class="img-fluid w-100 col-12" alt="atardecer"/>
+                    <div class="p-2">
+                        <strong>97 Likes</strong>
+                        <p>The sunset gives us the best moments of peace</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row my-3">
+                <div class="col-5 mx-auto border rounded p-0">
+                    <div class="d-flex p-2">
+                        <div class="w-100 fs-4">Trip</div>
+                        <small class="align-bottom">03/22</small>
+                    </div>
+                    <img style="object-fit: cover;" src="https://t4.ftcdn.net/jpg/02/74/45/17/240_F_274451707_jZJ4Swvhj97cp88SjX3mnhX549BB3Lgc.jpg" class="img-fluid w-100 col-12" alt="viaje"/>
+                <div class="p-2">
+                    <strong>208 Likes</strong>
+                    <p>Traveling fills the soul</p>
+                </div>
+            </div>
+        </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+</body>
+</html>
